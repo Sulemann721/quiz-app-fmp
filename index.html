@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quiz App</title>
+
+    <!-- custom css  -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Bootstrap link  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="body">
+
+
+      <div class="box" id="box">
+        <div id="heading">
+          <h1 class="h1">Quiz App</h1>
+        </div>
+
+        <div id="start-quiz">
+          <button class="btn btn-danger m-5 fs-4" onclick="startQuiz(this)" id="start-quiz">
+            Start Quiz
+          </button>
+          <a href="./pages/addQuiz.html" class="bg-light me-0 p-2 rounded text-black border border-2" target="_blank">Add Question</a>
+        </div> 
+      </div>
+
+
+    
+
+
+          <div class="container w-50   " >
+            <div class="d-none w-75" id="quizDisplay">
+            <div class="p-3 my-3 d-flex justify-content-between align-items-center gap-3 bg-info p-3 rounded w-100">
+              <h2 class=" text-center fs-1 text-decoration-underline bg-info ">
+                Quiz App
+              </h2>
+              <h2 class="bg-info ">Time left:<span id="timer">50</span> </h2>
+              <h2 class="bg-info">
+                <span id="currentQuestion" class="bg-light"></span>/<span id="totalQuestion" class="bg-success"></span>
+                
+              </h2>
+            </div>
+            
+
+            <div class="p-2" >
+              <div class="p-4 bg-warning rounded">
+                <h3  class="text-white" id="displayQuestion" ></h3>
+              </div>
+               <div class="container">
+                <div class="row" id="optionParent"></div>
+               </div>
+            </div>
+            
+
+            <div class="d-flex justify-content-center gap-2">
+              <button class="btn btn-success ps-3 pe-3 rounded d-none " id="prevQues" onclick="previousQuestion(this)" >Previous</button>
+              <button class="btn btn-success ps-3 pe-3 rounded " onclick="nextQuestion()">Next</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="d-none" id="resultDisplay">
+          <div class="container">
+              <div class="p-3 text-danger">
+                <h1>Your Result</h1>
+                <br>
+                <h1> <span id="percentage"></span></h1>
+                <button class="btn btn-success ps-3 pe-3 rounded  " id="startagain" onclick="startagain()" >Start Again</button>
+              </div>
+            </div>
+
+           
+          </div>
+       
+
+    <script src="app.js" type="module" ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
